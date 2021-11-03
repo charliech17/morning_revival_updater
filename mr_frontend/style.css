@@ -42,8 +42,6 @@ nav .nav_ul li a{
     background-color: #fff;
     border-radius: 10px;
     padding: .5rem;
-    /* justify-content: center;
-    align-items: center; */
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -66,7 +64,7 @@ nav .nav_ul li a{
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 700;
-    
+    flex-shrink: 5%;
 }
 
 .all_article .art1{

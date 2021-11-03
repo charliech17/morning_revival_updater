@@ -10,14 +10,8 @@ data.then(da =>{
     $('.all_article .h3').text(storedTitle);
 
     for(let i=1;i<=7;i++){
-        let art = document.querySelector(`.all_article .art_${i}`);
-        let a = document.createElement("a");
         let link = da[storedIndex][6-(i-1)][1];
-    
-        a.setAttribute('href',link);
-        // a.setAttribute('target','_blank');
-    
-        a.textContent = day[i-1];
-        art.appendChild(a);
+        let a = $('<a/>').text(day[i-1]).attr("href",link);
+        $(`.all_article .art_${i}`).append(a);
     }
 });
