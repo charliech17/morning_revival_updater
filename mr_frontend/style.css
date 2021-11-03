@@ -1,0 +1,74 @@
+html>*{
+    font-weight: 600;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background: url('./pic.jfif');
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    height: 10rem;
+    padding: .5rem;
+    border: .01rem black solid;
+    box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header>*{
+    margin: 0;
+    color: aliceblue;
+}
+
+
+nav .nav_ul li{
+    text-align: center;
+}
+
+nav .nav_ul li a{
+    text-decoration: inherit ;
+    color: inherit;
+}
+
+.all_article > *{
+    font-size: 1.2rem;
+}
+
+.all_article article{
+    margin: 1.5rem;
+    box-shadow: 0 0 32px 12px rgba(0,0,0,0.3);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: .5rem;
+    /* justify-content: center;
+    align-items: center; */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+
+/* background-color: rgba(204, 212, 241, 0.8); */
+    
+}
+
+.all_article article a{
+    text-decoration: inherit ;
+    color: white;
+    border: 0.05rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px 3px rgba(204, 212, 241, 0.8);
+    border-radius: 10px;
+    padding: .5rem;
+    background-color: rgba(12, 33, 107, 0.8);
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    
+}
+
+.all_article .art1{
+    margin-top: .3rem;
+}
