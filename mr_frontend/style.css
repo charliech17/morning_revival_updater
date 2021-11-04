@@ -24,16 +24,6 @@ header>*{
     color: aliceblue;
 }
 
-
-nav .nav_ul li{
-    text-align: center;
-}
-
-nav .nav_ul li a{
-    text-decoration: inherit ;
-    color: inherit;
-}
-
 .all_article > *{
     font-size: 1.2rem;
     flex-wrap: wrap;
@@ -93,10 +83,6 @@ nav .nav_ul li a{
         display: block;
     }
 
-    .content nav{
-        display: none;
-    }
-
     .all_article > *{
         font-size: 1rem;
         margin: 5px;
@@ -116,10 +102,6 @@ nav .nav_ul li a{
         background-color: rgba(24, 21, 21, 0.486);
     }
 
-    .content nav{
-        display: none;
-    }
-
     .all_article > *{
         font-size: 1rem;
         margin: 2px;
@@ -135,11 +117,6 @@ nav .nav_ul li a{
     header div{
         background-color: rgba(24, 21, 21, 0.239);
         border-radius: .8vw;
-    }
-
-    .content nav{
-        display: block;
-        flex: 1;
     }
 
     .all_article > *{
