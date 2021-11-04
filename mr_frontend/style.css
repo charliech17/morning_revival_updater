@@ -15,7 +15,9 @@ header{
     padding: .5rem;
     border: .01rem black solid;
     box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* z-index: -100; */
 }
+
 
 header>*{
     margin: 0;
@@ -34,19 +36,20 @@ nav .nav_ul li a{
 
 .all_article > *{
     font-size: 1.2rem;
+    flex-wrap: wrap;
 }
 
 .all_article article{
     margin: 1.5rem;
-    box-shadow: 0 0 32px 12px rgba(0,0,0,0.3);
     background-color: #fff;
     border-radius: 10px;
     padding: .5rem;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
     color: aliceblue;
-
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    
 /* background-color: rgba(204, 212, 241, 0.8); */
     
 }
@@ -56,17 +59,98 @@ nav .nav_ul li a{
     color: white;
     border: 0.05rem solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 8px 3px rgba(204, 212, 241, 0.8);
+    box-shadow: 0 0 32px 12px rgba(0,0,0,0.3);
+    background-color: rgba(12, 33, 107, 0.8);
     border-radius: 10px;
     padding: .5rem;
-    background-color: rgba(12, 33, 107, 0.8);
-    display: block;
+    /* display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%; */
+
     font-weight: 700;
-    flex-shrink: 5%;
+    flex-basis: 50%;
+    flex-wrap: wrap;
 }
 
 .all_article .art1{
     margin-top: .3rem;
+}
+
+@media (min-width:576px) {
+
+    header>*{
+        font-size: 900;
+    }
+
+    header div{
+        border-radius: 1vw;
+        background-color: rgba(24, 21, 21, 0.486);
+    }
+
+    .content{
+        display: block;
+    }
+
+    .content nav{
+        display: none;
+    }
+
+    .all_article > *{
+        font-size: 1rem;
+        margin: 5px;
+        width: none;
+    }
+    
+}
+
+@media (max-width:575px) {
+    header>*{
+        font-size: 900;
+    }
+
+
+    header div{
+        border-radius: 1vw;
+        background-color: rgba(24, 21, 21, 0.486);
+    }
+
+    .content nav{
+        display: none;
+    }
+
+    .all_article > *{
+        font-size: 1rem;
+        margin: 2px;
+        width: none;
+    }
+}
+
+@media (min-width: 768px) {
+    header>*{
+        font-size: 600;
+    }
+
+    header div{
+        background-color: rgba(24, 21, 21, 0.239);
+        border-radius: .8vw;
+    }
+
+    .content nav{
+        display: block;
+        flex: 1;
+    }
+
+    .all_article > *{
+        font-size: 1.5rem;
+        margin: 1.5px;
+    }
+
+    .all_article h3{
+        margin: 0;
+        text-align: center;
+        font-size: .8rem;
+    }
+    
 }
