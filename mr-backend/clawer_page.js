@@ -52,9 +52,14 @@ const path = require('path')
                     }
                 }
             }
+
+            if(temp.length === 7){
+                result.push(temp.slice());
+            }else{
+                fs.writeFileSync( path.join(__dirname,`result\\result${page}_temp.json`), JSON.stringify(temp));
+            }
     
             fs.writeFileSync( path.join(__dirname,`result\\result${page}.json`), JSON.stringify(result));
-            fs.writeFileSync( path.join(__dirname,`result\\result${page}_temp.json`), JSON.stringify(temp));
             fs.writeFileSync( path.join(__dirname,`message\\message${page}.json`), JSON.stringify(message));
     
           });
