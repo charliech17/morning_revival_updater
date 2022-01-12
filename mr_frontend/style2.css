@@ -1,27 +1,63 @@
-header{
-    background: url('./pic.jfif');
-    background-size: cover;
-    background-position: center center;
-    margin: 0;
-    height: 10rem;
-    padding: .5rem;
-    border: .01rem black solid;
-    box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
+html,
+body {
+  height: 100%;
 }
 
-header div{
-    background-color: rgba(24, 21, 21, 0.239);
-    border-radius: .8vw;
+.header {
+  background: url("./pic.jfif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 20%;
+  padding: 0.5rem;
+  border: 0.01rem black solid;
+  box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.all_article>article{
-    font-size: 1.2rem;
-    letter-spacing: .5rem;
-    line-height: 2.5rem;
-    margin-left: 2rem;
+.header div {
+  background-color: rgba(24, 21, 21, 0.239);
+  border-radius: 0.8vw;
 }
 
-.all_article h3{
-    margin-left: 1rem;
-    font-size: 1.5rem;   
+.all_article {
+  height: 80%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.all_article > article {
+  font-size: 5vw;
+  letter-spacing: 0.5rem;
+  line-height: 3rem;
+  margin: 8vw 0;
+  transform: translateX(50%) translateX(-5vw);
+}
+
+.all_article > article>a{
+    /* display: block; */
+    text-align: center;
+}
+
+.all_article h3 {
+  margin: 2vh 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media(min-width: 1000px) {
+  .all_article h3 {
+    margin: 3vh 15vw;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .all_article > article {
+    font-size: 2vw;
+    letter-spacing: 0.5rem;
+    line-height: 3rem;
+    margin: 1vw 0;
+    transform: translateX(50%) translateX(-2vw);
+  }
 }
