@@ -1,6 +1,8 @@
 import getLatestData from "./fetch_firebaseData.js";
+import checkIsLatestData from './checkData.js'
 
 let data = localStorage["data"] || getLatestData();
+let hasLocalData = localStorage["data"] ? true : false;
 
 let transfer = document.location.href;
 transfer = transfer.substring(transfer.indexOf("?idx=") + 5);
@@ -33,3 +35,5 @@ if (localStorage["data"]) {
     showAllArticles(datum);
   });
 }
+
+checkIsLatestData({oldData:data,hasLocalData});
