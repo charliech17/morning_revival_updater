@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-.header {
+/* .header {
   background: url("./pic.jfif");
   background-size: cover;
   background-position: center center;
@@ -18,6 +18,53 @@ body {
 .header div {
   background-color: rgba(24, 21, 21, 0.239);
   border-radius: 0.8vw;
+} */
+
+.header {
+  background: url("./pic.jfif");
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  height: 10vh;
+  padding: 0.5rem;
+  border: 0.01rem black solid;
+  box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-weight: 900;
+  color: #46a3ff;
+  font-size: 2vw;
+  background-color: rgba(240, 255, 255, 0.904);
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  margin: 0 0.5vh;
+  margin-top: 0.5rem;
+}
+
+header > * {
+  margin: 0;
+  color: aliceblue;
+}
+
+.header > div {
+  position: relative;
+  height: 5vh;
+}
+
+.title_verse {
+  padding: 0.1rem;
+  font-size: 1.5vw;
+  white-space: pre;
+  color: aliceblue;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* bottom: 0; */
+  margin: 1vh 0;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
 }
 
 .all_article {
@@ -35,9 +82,9 @@ body {
   transform: translateX(50%) translateX(-5vw);
 }
 
-.all_article > article>a{
-    /* display: block; */
-    text-align: center;
+.all_article > article > a {
+  /* display: block; */
+  text-align: center;
 }
 
 .all_article h3 {
@@ -46,7 +93,7 @@ body {
   text-align: center;
 }
 
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
   .all_article h3 {
     margin: 3vh 15vw;
     font-size: 2rem;
@@ -59,5 +106,21 @@ body {
     line-height: 3rem;
     margin: 1vw 0;
     transform: translateX(50%) translateX(-2vw);
+  }
+
+  .header {
+    height: 18vh;
+  }
+  .title_verse {
+    padding: 0.3rem;
+  }
+
+  .all_article > * {
+    font-size: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .all_article article {
+    margin: 3vh 20vw;
   }
 }

@@ -16,10 +16,6 @@ body {
   padding: 0.5rem;
   border: 0.01rem black solid;
   box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* display: flex; */
-  /* flex-basis: content; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .title {
@@ -32,6 +28,10 @@ body {
   width: fit-content;
   margin: 0 .5vh;
   margin-top: .5rem;
+}
+
+.navbar-brand{
+  margin-left: .5rem;
 }
 
 header > * {
@@ -101,4 +101,5 @@ header > * {
   .all_article article{
     margin: 3vh 20vw;
   }
+
 }
