@@ -1,7 +1,16 @@
 let request = require("request");
 let cheerio = require("cheerio");
 const fetch = require("node-fetch");
+const schedule = require('node-schedule');
+const momentUse = require('moment');
 
+
+let rule = new schedule.RecurrenceRule()
+// rule.second = [0, 10, 20, 30, 40, 50];
+rule.dayOfWeek = [3,7];
+rule.hour = 0;
+rule.minute = 0;
+rule.second = 0;
 //page 是從網頁的第幾頁開始抓，第一頁是最新資料(預計抓前四頁的資料)
 //抓資料是用text.includes('晨興聖言-') '晨興聖言-' 若對方文字有改變，則這部分城市需更改
 //後面這兩個程式也可能因對方網頁關係需修改  let week=text.substring(text.indexOf('(W')+2); week = week.substring(0,week.indexOf('-'));
@@ -12,7 +21,7 @@ async function clawer(page) {
   await request(
     {
       url:
-        "https://blog.xuite.net/ymch130/MorningRevival?st=c&w=3424876&p=" +
+        `${process.env.getDateURL}` +
         page,
       method: "GET",
     },
@@ -84,7 +93,7 @@ async function fetchPost({ type = "result", page, istemp = false, saveData }) {
   }
 
   const response = await fetch(
-    `https://morning-revival-updater-default-rtdb.firebaseio.com/${type}/addNew${capitalizeFirstLetter(
+    `${process.env.DateBaseURL}/${type}/addNew${capitalizeFirstLetter(
       type
     )}/${urlSegment}.json`,
     {
@@ -105,10 +114,15 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-console.log("爬取最新晨興聖言中...");
+function startApp() {
+  schedule.scheduleJob(rule, () => {
+    console.log("爬取最新晨興聖言中...",momentUse(new Date()).format('YYYY/MM/DD HH:mm:ss'));
+    clawer(1);
+    clawer(2);
+    clawer(3);
+    clawer(4);
+    clawer(5);
+  });
+}
 
-clawer(1);
-clawer(2);
-clawer(3);
-clawer(4);
-clawer(5);
+startApp()
