@@ -13,6 +13,12 @@ function loopAllTitles(msg) {
       .text(`M${msg[i][1]}` + text.substring(text.indexOf("\n")))
       .attr("data-ith", i);
   }
+
+  if(messageLength<10) {
+    for(let i=messageLength; i<=10; i++) {
+      $(`.all_article .art_${i+1}`).remove()
+    }
+  }
 }
 
 function renderAllTitles() {
