@@ -1,8 +1,8 @@
 let requestData = async (resolve,reject) => {
 
-    //resolve
+    //resolve process.env.UPDATEURL
     resolve(
-    fetch('http://localhost:3000/apiData',{
+    fetch(process.env.UPDATEURL,{
         method: 'GET' ,
         headers: new Headers({
             'Content-Type': 'application/json'
@@ -11,7 +11,7 @@ let requestData = async (resolve,reject) => {
         return response.json();
       }).then(function(data) {
     
-        return data;
+        return data.data;
       })
     )
 

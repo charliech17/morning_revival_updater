@@ -2,7 +2,7 @@ let requestMessage = async (resolve,reject) => {
 
   //resolve
   resolve(
-  fetch('http://localhost:3000/apiMessage',{
+  fetch(process.env.UPDATEURL,{
       method: 'GET' ,
       headers: new Headers({
           'Content-Type': 'application/json'
@@ -10,7 +10,7 @@ let requestMessage = async (resolve,reject) => {
   }).then(function(response) {
       return response.json();
     }).then(function(message) {    
-      return message;
+      return message.message;
     })
   )
 
